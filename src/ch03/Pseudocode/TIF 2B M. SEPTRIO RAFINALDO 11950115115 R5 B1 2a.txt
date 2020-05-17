@@ -1,0 +1,9 @@
+-mulai
+-int x,y
+-input x
+-input y
+-if x > y
+-print x
+-else
+-print y
+-selesai

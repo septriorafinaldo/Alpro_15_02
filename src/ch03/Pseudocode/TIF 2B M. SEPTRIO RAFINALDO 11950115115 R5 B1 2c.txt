@@ -1,0 +1,6 @@
+-mulai
+-int a,b,c
+-input a //bilangan real
+-input b (b || 1 & 2)
+-c=a/b
+-selesai
