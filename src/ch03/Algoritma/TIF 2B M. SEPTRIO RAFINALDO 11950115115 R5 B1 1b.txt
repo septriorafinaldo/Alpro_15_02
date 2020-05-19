@@ -1,9 +1,0 @@
--int x,y,z
--input nilai x
--input nilai y
--input nilai z
--jika nilai x > y dan x > z
--jika ya maka bilangan terbesar adalah x
--jika tidak maka dihitung ulang dengan rumus jika y > x dan y > z
--jika ya maka bilangan terbesar adalah y
--jika tidak maka bilangan terbesar adalah z

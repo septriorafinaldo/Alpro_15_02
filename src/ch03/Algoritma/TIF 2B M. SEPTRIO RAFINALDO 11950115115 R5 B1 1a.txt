@@ -1,7 +1,0 @@
--mulai
--buat variabel x,y
--masukkan nilai x
--masukkan nilai y
--jika nilai x > y, maka print nilai x nilai tertinggi
--jika nilai y > x, maka print nilai y nilai tertinggi
--selesai

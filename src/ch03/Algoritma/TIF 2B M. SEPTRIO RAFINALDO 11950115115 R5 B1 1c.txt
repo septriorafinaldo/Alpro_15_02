@@ -1,7 +1,0 @@
--mulai
--buat variabel a,b,c
--masukkan nilai a bilangan real
--masukkan nilai b bilangan pembagi selain 1 dan 2
--buat rumus c = a/b
--hasil = c
--selesai
