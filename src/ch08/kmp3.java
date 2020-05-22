@@ -1,23 +1,26 @@
+package ch08;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-
-
-public class KnuthMorrisPratt {
-    private final int[] failure;
-    public KnuthMorrisPratt(String text, String pat)
+ 
+public class kmp3 {
+    
+    private int[] failure;
+   
+    public kmp3(String text, String pat)
     {
-        /** pre construct failure array for a pattern **/
+     
         failure = new int[pat.length()];
         fail(pat);
-        /** find match **/
+        
         int pos = posMatch(text, pat);
         if (pos == -1)
-            System.out.println("\nTidak di Temukan Kecocokan");
+            System.out.println("data tidak ketemu");
         else
-            System.out.println("\nKecocokan di Temukan Pada Index ke- "+ pos);
+            System.out.println("kecocokan ditemukan di indeks = "+ pos);
     }
-    /** Failure function for a pattern **/
+   
     private void fail(String pat)
     {
         int n = pat.length();
@@ -33,8 +36,9 @@ public class KnuthMorrisPratt {
                 failure[j] = -1;
         }
     }
-    /** Function to find match for a pattern **/
-    private int posMatch(String text, String pat){
+   
+    private int posMatch(String text, String pat)
+    {
         int i = 0, j = 0;
         int lens = text.length();
         int lenp = pat.length();
@@ -52,13 +56,15 @@ public class KnuthMorrisPratt {
         }
         return ((j == lenp) ? (i - lenp) : -1);
     }
-    public static void main(String[] args) throws IOException{
+    
+    public static void main(String[] args) throws IOException
+    {    
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Mencoba Knuth Morris Pratt\n");
-        System.out.println("\nMasukkan Teks\n");
+        System.out.println("Knuth Morris Pratt Test");
+        System.out.println(" Masukkan teks = ");
         String text = br.readLine();
-        System.out.println("\nMasukkan Pola\n");
+        System.out.println("Masukkan pola= ");
         String pattern = br.readLine();
-        KnuthMorrisPratt kmp = new KnuthMorrisPratt(text, pattern);
+        kmp3 KMP = new kmp3(text, pattern);        
     }
 }

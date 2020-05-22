@@ -1,6 +1,9 @@
-public class AKS_Primality_Test {
+import java.util.Scanner;
+
+public class aksprimalitytest {
     static long c[] = new long[100]; 
-   
+  
+  
     static void coef(int n) 
     { 
         c[0] = 1; 
@@ -13,25 +16,23 @@ public class AKS_Primality_Test {
     } 
   
     static boolean isPrime(int n) 
-    { 
+    {    
         coef(n); 
-  
         c[0]++; 
         c[n]--; 
-  
         int i = n; 
-        while ((i--) > 0 && c[i] % n == 0) 
-            ; 
-  
+        while ((i--) > 0 && c[i] % n == 0); 
         return i < 0; 
     } 
-    
-    public static void main(String[] args) 
-    { 
-        int n = 29; 
+   
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("masukkan bilangan = ");
+        int n = sc.nextInt();
         if (isPrime(n)) 
-            System.out.println("Bilangan Prima"); 
+            System.out.println("Bilangan prima"); 
         else
-            System.out.println("Bukan Bilangan Prima"); 
+            System.out.println("Bukan prima"); 
     } 
 } 
+    
